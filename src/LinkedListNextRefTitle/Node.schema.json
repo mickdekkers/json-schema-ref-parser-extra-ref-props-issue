@@ -1,0 +1,18 @@
+{
+    "$id": "Node.schema.json",
+    "definitions": {
+        "node": {
+            "type": "object",
+            "properties": {
+                "data": {
+                    "description": "Some data",
+                    "type": "integer"
+                },
+                "next": {
+                    "$ref": "#/definitions/node",
+                    "title": "next"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "$id": "LinkedList.schema.json",
+    "definitions": {
+        "linkedList": {
+            "$ref": "#/definitions/linkedList/properties/next",
+            "title": "linkedList"
+        }
+    }
+}

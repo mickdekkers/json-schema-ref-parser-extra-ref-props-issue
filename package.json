@@ -1,0 +1,17 @@
+{
+    "name": "json-schema-ref-parser-extra-ref-props-issue",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "json-schema-ref-parser": "^4.1.0"
+    },
+    "scripts": {
+        "clean": "rm -f src/**/*.bundled.schema.json && echo 'Bundled schemas deleted'",
+        "start": "npm run -s clean && echo 'Rebundling' && npm run -s bundle",
+        "bundle": "npm run -s bundle:linked-list && npm run -s bundle:linked-list-root-ref-title && npm run -s bundle:linked-list-both-refs-title && npm run -s bundle:linked-list-next-ref-title",
+        "bundle:linked-list": "node src/LinkedList/bundle.js",
+        "bundle:linked-list-root-ref-title": "node src/LinkedListRootRefTitle/bundle.js",
+        "bundle:linked-list-both-refs-title": "node src/LinkedListBothRefsTitle/bundle.js",
+        "bundle:linked-list-next-ref-title": "node src/LinkedListNextRefTitle/bundle.js"
+    }
+}
